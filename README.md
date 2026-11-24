@@ -1,2 +1,0 @@
-# Equalaura-party
-Communist party
