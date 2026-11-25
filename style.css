@@ -1,689 +1,466 @@
 
-/* =================================
-   EQUAL AURA - WEBSITE DESIGN
-================================= */
-
-
-/* COLOUR PALETTE */
+/* =====================================
+   EQUAL AURA - OFFICIAL WEBSITE
+===================================== */
 
 :root {
-
-    --red: #B92E32;
-
+    --red: #b92e32;
     --dark-red: #922124;
-
-    --gold: #F9D875;
-
-    --light-gold: #FFF0B5;
-
-    --white: #FFFFFF;
-
+    --gold: #f9d875;
+    --light-gold: #fff0b5;
+    --white: #ffffff;
     --black: #191919;
-
-    --grey: #555555;
-
+    --grey: #666666;
 }
 
-
-/* GENERAL SETTINGS */
-
 * {
-
     margin: 0;
-
     padding: 0;
-
     box-sizing: border-box;
-
     scroll-behavior: smooth;
-
 }
 
 body {
-
     font-family: Arial, Helvetica, sans-serif;
-
-    background: var(--gold);
-
     color: var(--black);
-
+    background: var(--gold);
     line-height: 1.7;
-
 }
 
 
-/* =================================
-   HEADER
-================================= */
+/* HEADER */
 
-.header {
-
+header {
     background: var(--red);
-
-    padding: 20px 7%;
-
+    padding: 12px 5%;
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
-
     flex-wrap: wrap;
-
     gap: 15px;
-
 }
 
 .brand {
-
-    font-size: 26px;
-
-    font-weight: 900;
-
-    letter-spacing: 3px;
-
+    display: flex;
+    align-items: center;
+    gap: 12px;
     color: var(--gold);
-
     text-decoration: none;
-
+    font-size: 22px;
+    font-weight: 900;
+    letter-spacing: 2px;
 }
 
-.brand span {
-
-    color: var(--white);
-
+.brand img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
 }
 
 nav {
-
     display: flex;
-
     flex-wrap: wrap;
-
-    gap: 24px;
-
+    gap: 18px;
 }
 
 nav a {
-
-    color: var(--white);
-
+    color: white;
     text-decoration: none;
-
-    font-size: 14px;
-
+    font-size: 13px;
     font-weight: bold;
-
     transition: 0.3s;
-
 }
 
-nav a:hover {
-
+nav a:hover,
+nav a.active {
     color: var(--gold);
-
 }
 
 
-/* =================================
-   HERO SECTION
-================================= */
+/* HOMEPAGE HERO */
 
 .hero {
-
+    min-height: 680px;
     background: var(--gold);
-
-    min-height: 700px;
-
     display: flex;
-
-    justify-content: center;
-
     align-items: center;
-
+    justify-content: center;
     text-align: center;
-
-    padding: 60px 20px;
-
+    padding: 55px 20px;
 }
 
 .hero-content {
-
     max-width: 850px;
-
 }
 
-.main-logo {
-
-    width: 210px;
-
+.hero-logo {
+    width: 200px;
     max-width: 65%;
-
     height: auto;
-
     display: block;
-
     margin: 0 auto 15px;
-
 }
 
 .hero h1 {
-
-    font-size: clamp(45px, 8vw, 78px);
-
     color: var(--red);
-
+    font-size: clamp(45px, 8vw, 80px);
     font-weight: 900;
-
-    letter-spacing: 7px;
-
-    margin-bottom: 5px;
-
+    letter-spacing: 6px;
 }
 
-.hero-subtitle {
-
-    font-size: 13px;
-
+.eyebrow {
+    color: var(--red);
+    font-size: 12px;
+    font-weight: 900;
     letter-spacing: 4px;
+    margin-bottom: 12px;
+}
 
-    font-weight: bold;
-
-    color: var(--dark-red);
-
-    margin-bottom: 25px;
-
+.slogan {
+    background: var(--red);
+    color: var(--gold);
+    padding: 20px;
+    font-size: 27px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    line-height: 1.8;
+    margin: 25px auto;
+    max-width: 450px;
 }
 
 .slogan-image {
-
     width: 370px;
-
     max-width: 90%;
-
-    height: auto;
-
     display: block;
-
     margin: 25px auto;
-
 }
 
 .hero-description {
-
-    font-size: 17px;
-
-    color: var(--black);
-
     margin: 20px 0;
-
+    font-size: 17px;
 }
 
-
-/* MAIN BUTTON */
-
-.main-button {
-
+.button {
     display: inline-block;
-
     background: var(--red);
-
     color: var(--gold);
-
     text-decoration: none;
-
-    padding: 15px 32px;
-
-    font-size: 14px;
-
+    padding: 14px 28px;
     font-weight: bold;
-
+    font-size: 13px;
     letter-spacing: 1px;
-
     margin-top: 15px;
-
     transition: 0.3s;
-
 }
 
-.main-button:hover {
-
+.button:hover {
     background: var(--dark-red);
-
-    transform: translateY(-4px);
-
+    transform: translateY(-3px);
 }
 
 
-/* =================================
-   GENERAL SECTIONS
-================================= */
+/* INNER PAGE HERO */
+
+.page-hero {
+    background: var(--red);
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.page-hero .eyebrow {
+    color: var(--gold);
+}
+
+.page-hero h1 {
+    font-size: clamp(35px, 7vw, 65px);
+    color: var(--gold);
+    letter-spacing: 3px;
+    margin: 15px 0;
+}
+
+.page-hero p:not(.eyebrow) {
+    font-size: 17px;
+}
+
+
+/* GENERAL SECTIONS */
 
 .section {
-
-    padding: 90px 10%;
-
+    padding: 85px 9%;
     text-align: center;
-
+    background: white;
 }
 
-.section-label {
-
-    color: var(--red);
-
-    font-size: 13px;
-
-    font-weight: bold;
-
-    letter-spacing: 4px;
-
+.section h2 {
+    font-size: 36px;
+    margin: 10px 0;
 }
 
-.section h2,
-.contact h2 {
-
-    font-size: 40px;
-
-    margin: 15px 0;
-
-    font-weight: 900;
-
-}
-
-.section-line {
-
-    width: 75px;
-
+.line {
+    width: 70px;
     height: 5px;
-
     background: var(--red);
-
     margin: 20px auto 35px;
-
 }
 
-.section-text {
-
+.intro {
     max-width: 750px;
-
     margin: auto;
-
     color: var(--grey);
-
     font-size: 17px;
+}
 
+.light-section {
+    background: var(--light-gold);
+}
+
+.content-logo {
+    width: 180px;
+    max-width: 70%;
+    display: block;
+    margin: 20px auto;
 }
 
 
-/* =================================
-   ABOUT SECTION
-================================= */
+/* CARDS */
 
-.about {
-
-    background: var(--white);
-
-}
-
-
-/* =================================
-   IDEOLOGY SECTION
-================================= */
-
-.ideology {
-
-    background: var(--black);
-
-    color: var(--white);
-
-}
-
-.ideology .section-text {
-
-    color: #cccccc;
-
-}
-
-
-/* IDEOLOGY CARDS */
-
-.card-container {
-
+.cards {
     display: grid;
-
     grid-template-columns:
         repeat(auto-fit, minmax(220px, 1fr));
-
-    gap: 25px;
-
-    margin-top: 50px;
-
+    gap: 24px;
+    margin-top: 40px;
+    text-align: left;
 }
 
 .card {
-
-    background: #262626;
-
-    padding: 35px 25px;
-
+    background: #fff7df;
     border-bottom: 5px solid var(--red);
-
+    padding: 30px;
+    text-decoration: none;
+    color: var(--black);
     transition: 0.3s;
-
 }
 
 .card:hover {
-
-    transform: translateY(-7px);
-
-    background: #333333;
-
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
 .card h3 {
-
-    color: var(--gold);
-
+    color: var(--red);
     font-size: 21px;
-
-    margin-bottom: 15px;
-
+    margin-bottom: 12px;
 }
 
 .card p {
-
-    color: #cccccc;
-
-    font-size: 15px;
-
-}
-
-
-/* =================================
-   PRINCIPLES SECTION
-================================= */
-
-.principles {
-
-    background: var(--light-gold);
-
-}
-
-.principles-container {
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(auto-fit, minmax(210px, 1fr));
-
-    gap: 25px;
-
-    margin-top: 40px;
-
-    text-align: left;
-
-}
-
-.principle {
-
-    background: var(--white);
-
-    padding: 30px;
-
-    border-left: 5px solid var(--red);
-
-    transition: 0.3s;
-
-}
-
-.principle:hover {
-
-    transform: translateY(-5px);
-
-}
-
-.principle span {
-
-    color: var(--red);
-
-    font-size: 30px;
-
-    font-weight: 900;
-
-}
-
-.principle h3 {
-
-    font-size: 21px;
-
-    margin: 10px 0;
-
-}
-
-.principle p {
-
     color: var(--grey);
+    font-size: 15px;
+}
 
+.card span {
+    display: inline-block;
+    color: var(--red);
+    font-weight: bold;
+    font-size: 12px;
+    margin-top: 20px;
 }
 
 
-/* =================================
-   HISTORY SECTION
-================================= */
+/* DARK SECTION */
 
-.history {
-
-    background: var(--white);
-
+.dark-section {
+    background: var(--black);
+    color: white;
 }
 
-
-/* =================================
-   CONTACT SECTION
-================================= */
-
-.contact {
-
-    background: var(--red);
-
-    color: var(--white);
-
-    text-align: center;
-
-    padding: 85px 10%;
-
+.dark-section .intro {
+    color: #dddddd;
 }
 
-.contact .section-label {
+.dark-section .card {
+    background: #292929;
+    color: white;
+}
 
+.dark-section .card p {
+    color: #cccccc;
+}
+
+.dark-section .card h3 {
     color: var(--gold);
-
-}
-
-.contact .section-line {
-
-    background: var(--gold);
-
-}
-
-.contact p {
-
-    max-width: 650px;
-
-    margin: auto;
-
-    color: var(--white);
-
-    font-size: 17px;
-
 }
 
 
-/* =================================
-   FOOTER
-================================= */
+/* HISTORY TIMELINE */
+
+.timeline {
+    max-width: 700px;
+    margin: 40px auto;
+    text-align: left;
+    border-left: 4px solid var(--red);
+    padding-left: 30px;
+}
+
+.timeline-item {
+    position: relative;
+    padding: 15px 20px 35px;
+    margin-bottom: 20px;
+    background: white;
+    border: 1px solid #eadcae;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -40px;
+    top: 22px;
+    width: 16px;
+    height: 16px;
+    background: var(--red);
+    border-radius: 50%;
+}
+
+.timeline-item span {
+    color: var(--red);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.timeline-item h3 {
+    margin: 8px 0;
+}
+
+
+/* NEWS */
+
+.news-label {
+    color: var(--red);
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+
+/* CONTACT */
+
+.contact-card {
+    background: var(--light-gold);
+    max-width: 500px;
+    margin: 25px auto;
+    padding: 25px;
+    border-left: 5px solid var(--red);
+}
+
+.contact-card h3 {
+    color: var(--red);
+}
+
+
+/* HOMEPAGE BANNER */
+
+.banner {
+    background: var(--red);
+    color: var(--gold);
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.banner h2 {
+    font-size: clamp(22px, 4vw, 36px);
+    letter-spacing: 2px;
+}
+
+
+/* FOOTER */
 
 footer {
-
     background: var(--black);
-
-    color: var(--white);
-
+    color: white;
     text-align: center;
-
     padding: 40px 20px;
-
 }
 
-.footer-brand {
-
+footer h3 {
     color: var(--gold);
-
-    font-size: 28px;
-
-    font-weight: 900;
-
+    font-size: 26px;
     letter-spacing: 4px;
-
-    margin-bottom: 10px;
-
 }
 
-footer > p {
-
+footer p {
     color: #cccccc;
-
-}
-
-.footer-links {
-
-    display: flex;
-
-    justify-content: center;
-
-    flex-wrap: wrap;
-
-    gap: 25px;
-
-    margin: 25px 0;
-
-}
-
-.footer-links a {
-
-    color: var(--white);
-
-    text-decoration: none;
-
     font-size: 14px;
-
-}
-
-.footer-links a:hover {
-
-    color: var(--gold);
-
 }
 
 .copyright {
-
-    color: #888888;
-
-    font-size: 13px;
-
     margin-top: 25px;
-
+    color: #888888;
+    font-size: 12px;
 }
 
 
-/* =================================
-   MOBILE RESPONSIVENESS
-================================= */
+/* MOBILE RESPONSIVENESS */
 
-@media (max-width: 700px) {
+@media (max-width: 850px) {
 
-    .header {
-
+    header {
         flex-direction: column;
-
-        padding: 20px;
-
+        justify-content: center;
     }
 
     nav {
-
         justify-content: center;
-
-        gap: 15px;
-
-    }
-
-    nav a {
-
-        font-size: 13px;
-
+        gap: 12px;
     }
 
     .hero {
-
-        min-height: 600px;
-
-        padding: 45px 15px;
-
-    }
-
-    .main-logo {
-
-        width: 165px;
-
+        min-height: 550px;
     }
 
     .hero h1 {
-
-        font-size: 43px;
-
         letter-spacing: 3px;
-
     }
 
-    .hero-subtitle {
-
-        font-size: 11px;
-
-        letter-spacing: 2px;
-
-    }
-
-    .slogan-image {
-
-        width: 310px;
-
+    .slogan {
+        font-size: 21px;
     }
 
     .section {
-
         padding: 65px 7%;
-
     }
 
-    .section h2,
-    .contact h2 {
-
-        font-size: 31px;
-
+    .page-hero {
+        padding: 75px 15px;
     }
 
-    .section-text {
+}
 
-        font-size: 15px;
+@media (max-width: 450px) {
 
+    .brand {
+        font-size: 19px;
     }
 
-    .card-container,
-    .principles-container {
+    nav {
+        gap: 10px;
+    }
 
-        grid-template-columns: 1fr;
+    nav a {
+        font-size: 12px;
+    }
 
+    .hero-logo {
+        width: 155px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .section h2 {
+        font-size: 29px;
     }
 
 }
