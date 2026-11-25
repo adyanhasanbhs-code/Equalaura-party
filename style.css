@@ -1,309 +1,689 @@
 
+/* =================================
+   EQUAL AURA - WEBSITE DESIGN
+================================= */
+
+
+/* COLOUR PALETTE */
+
+:root {
+
+    --red: #B92E32;
+
+    --dark-red: #922124;
+
+    --gold: #F9D875;
+
+    --light-gold: #FFF0B5;
+
+    --white: #FFFFFF;
+
+    --black: #191919;
+
+    --grey: #555555;
+
+}
+
+
 /* GENERAL SETTINGS */
 
 * {
+
     margin: 0;
+
     padding: 0;
+
     box-sizing: border-box;
+
     scroll-behavior: smooth;
+
 }
 
 body {
+
     font-family: Arial, Helvetica, sans-serif;
-    background: #f5f5f5;
-    color: #222;
+
+    background: var(--gold);
+
+    color: var(--black);
+
     line-height: 1.7;
+
 }
 
 
-/* NAVIGATION */
+/* =================================
+   HEADER
+================================= */
 
-header {
-    background: #111;
-    color: white;
-    padding: 22px 8%;
+.header {
+
+    background: var(--red);
+
+    padding: 20px 7%;
+
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
+
     flex-wrap: wrap;
+
     gap: 15px;
+
 }
 
-.logo {
-    font-size: 25px;
-    font-weight: bold;
-    letter-spacing: 2px;
+.brand {
+
+    font-size: 26px;
+
+    font-weight: 900;
+
+    letter-spacing: 3px;
+
+    color: var(--gold);
+
+    text-decoration: none;
+
 }
 
-.logo span {
-    color: #df2929;
+.brand span {
+
+    color: var(--white);
+
 }
 
 nav {
+
     display: flex;
+
     flex-wrap: wrap;
-    gap: 22px;
+
+    gap: 24px;
+
 }
 
 nav a {
+
+    color: var(--white);
+
     text-decoration: none;
-    color: white;
+
     font-size: 14px;
+
+    font-weight: bold;
+
     transition: 0.3s;
+
 }
 
 nav a:hover {
-    color: #ed3939;
+
+    color: var(--gold);
+
 }
 
 
-/* HERO */
+/* =================================
+   HERO SECTION
+================================= */
 
 .hero {
-    min-height: 570px;
-    background:
-        linear-gradient(
-            rgba(0,0,0,0.83),
-            rgba(0,0,0,0.88)
-        ),
-        linear-gradient(135deg, #4c0808, #171717);
+
+    background: var(--gold);
+
+    min-height: 700px;
 
     display: flex;
+
     justify-content: center;
+
     align-items: center;
+
     text-align: center;
-    color: white;
-    padding: 50px 20px;
+
+    padding: 60px 20px;
+
 }
 
 .hero-content {
+
     max-width: 850px;
+
 }
 
-.subtitle,
-.section-label {
-    color: #e33333;
-    font-size: 13px;
-    font-weight: bold;
-    letter-spacing: 4px;
+.main-logo {
+
+    width: 210px;
+
+    max-width: 65%;
+
+    height: auto;
+
+    display: block;
+
+    margin: 0 auto 15px;
+
 }
 
 .hero h1 {
-    font-size: clamp(45px, 9vw, 90px);
-    color: #e33333;
+
+    font-size: clamp(45px, 8vw, 78px);
+
+    color: var(--red);
+
+    font-weight: 900;
+
     letter-spacing: 7px;
-    margin: 15px 0;
+
+    margin-bottom: 5px;
+
 }
 
-.hero h2 {
-    font-size: 25px;
-    font-weight: normal;
-    margin-bottom: 20px;
+.hero-subtitle {
+
+    font-size: 13px;
+
+    letter-spacing: 4px;
+
+    font-weight: bold;
+
+    color: var(--dark-red);
+
+    margin-bottom: 25px;
+
+}
+
+.slogan-image {
+
+    width: 370px;
+
+    max-width: 90%;
+
+    height: auto;
+
+    display: block;
+
+    margin: 25px auto;
+
 }
 
 .hero-description {
-    max-width: 650px;
-    margin: auto;
-    color: #ddd;
+
     font-size: 17px;
+
+    color: var(--black);
+
+    margin: 20px 0;
+
 }
 
 
-/* BUTTON */
+/* MAIN BUTTON */
 
-.btn {
+.main-button {
+
     display: inline-block;
-    margin-top: 30px;
-    background: #d62828;
-    color: white;
-    padding: 14px 30px;
+
+    background: var(--red);
+
+    color: var(--gold);
+
     text-decoration: none;
+
+    padding: 15px 32px;
+
+    font-size: 14px;
+
     font-weight: bold;
+
     letter-spacing: 1px;
-    border-radius: 3px;
+
+    margin-top: 15px;
+
     transition: 0.3s;
+
 }
 
-.btn:hover {
-    background: #a91f1f;
-    transform: translateY(-3px);
+.main-button:hover {
+
+    background: var(--dark-red);
+
+    transform: translateY(-4px);
+
 }
 
 
-/* GENERAL SECTIONS */
+/* =================================
+   GENERAL SECTIONS
+================================= */
 
 .section {
-    padding: 85px 10%;
+
+    padding: 90px 10%;
+
     text-align: center;
-    background: #fff;
+
+}
+
+.section-label {
+
+    color: var(--red);
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 4px;
+
 }
 
 .section h2,
-.dark-section h2,
-.contact-section h2 {
-    font-size: 38px;
-    margin: 15px 0 25px;
+.contact h2 {
+
+    font-size: 40px;
+
+    margin: 15px 0;
+
+    font-weight: 900;
+
 }
 
-.section > p:not(.section-label) {
+.section-line {
+
+    width: 75px;
+
+    height: 5px;
+
+    background: var(--red);
+
+    margin: 20px auto 35px;
+
+}
+
+.section-text {
+
     max-width: 750px;
+
     margin: auto;
-    color: #666;
+
+    color: var(--grey);
+
+    font-size: 17px;
+
 }
 
 
-/* DARK SECTION */
+/* =================================
+   ABOUT SECTION
+================================= */
 
-.dark-section {
-    background: #171717;
-    color: white;
-    padding: 85px 10%;
-    text-align: center;
+.about {
+
+    background: var(--white);
+
 }
 
-.dark-section > p:not(.section-label) {
-    max-width: 750px;
-    margin: auto;
-    color: #ccc;
+
+/* =================================
+   IDEOLOGY SECTION
+================================= */
+
+.ideology {
+
+    background: var(--black);
+
+    color: var(--white);
+
+}
+
+.ideology .section-text {
+
+    color: #cccccc;
+
 }
 
 
 /* IDEOLOGY CARDS */
 
-.cards {
+.card-container {
+
     display: grid;
+
     grid-template-columns:
         repeat(auto-fit, minmax(220px, 1fr));
+
     gap: 25px;
-    margin-top: 45px;
+
+    margin-top: 50px;
+
 }
 
 .card {
-    background: #242424;
-    border-bottom: 4px solid #d62828;
+
+    background: #262626;
+
     padding: 35px 25px;
+
+    border-bottom: 5px solid var(--red);
+
     transition: 0.3s;
+
 }
 
 .card:hover {
+
     transform: translateY(-7px);
-    background: #303030;
+
+    background: #333333;
+
 }
 
 .card h3 {
-    color: #e63b3b;
+
+    color: var(--gold);
+
+    font-size: 21px;
+
     margin-bottom: 15px;
+
 }
 
 .card p {
-    color: #ccc;
+
+    color: #cccccc;
+
+    font-size: 15px;
+
 }
 
 
-/* PRINCIPLES */
+/* =================================
+   PRINCIPLES SECTION
+================================= */
 
-.principles-list {
+.principles {
+
+    background: var(--light-gold);
+
+}
+
+.principles-container {
+
     display: grid;
+
     grid-template-columns:
-        repeat(auto-fit, minmax(220px, 1fr));
+        repeat(auto-fit, minmax(210px, 1fr));
+
     gap: 25px;
+
     margin-top: 40px;
+
     text-align: left;
+
 }
 
-.principles-list div {
-    padding: 25px;
-    border-left: 4px solid #d62828;
-    background: #f7f7f7;
+.principle {
+
+    background: var(--white);
+
+    padding: 30px;
+
+    border-left: 5px solid var(--red);
+
+    transition: 0.3s;
+
 }
 
-.principles-list span {
-    color: #d62828;
-    font-size: 25px;
-    font-weight: bold;
+.principle:hover {
+
+    transform: translateY(-5px);
+
 }
 
-.principles-list h3 {
+.principle span {
+
+    color: var(--red);
+
+    font-size: 30px;
+
+    font-weight: 900;
+
+}
+
+.principle h3 {
+
+    font-size: 21px;
+
     margin: 10px 0;
+
 }
 
-.principles-list p {
-    color: #666;
+.principle p {
+
+    color: var(--grey);
+
 }
 
 
-/* CONTACT */
+/* =================================
+   HISTORY SECTION
+================================= */
 
-.contact-section {
-    background: #252525;
-    color: white;
+.history {
+
+    background: var(--white);
+
+}
+
+
+/* =================================
+   CONTACT SECTION
+================================= */
+
+.contact {
+
+    background: var(--red);
+
+    color: var(--white);
+
     text-align: center;
-    padding: 85px 20px;
+
+    padding: 85px 10%;
+
 }
 
-.contact-section > p:not(.section-label) {
-    color: #ccc;
+.contact .section-label {
+
+    color: var(--gold);
+
+}
+
+.contact .section-line {
+
+    background: var(--gold);
+
+}
+
+.contact p {
+
+    max-width: 650px;
+
+    margin: auto;
+
+    color: var(--white);
+
+    font-size: 17px;
+
 }
 
 
-/* FOOTER */
+/* =================================
+   FOOTER
+================================= */
 
 footer {
-    background: #101010;
-    color: white;
+
+    background: var(--black);
+
+    color: var(--white);
+
     text-align: center;
-    padding: 35px 15px;
+
+    padding: 40px 20px;
+
 }
 
-.footer-logo {
-    color: #e33333;
-    font-size: 25px;
-    font-weight: bold;
-    letter-spacing: 3px;
+.footer-brand {
+
+    color: var(--gold);
+
+    font-size: 28px;
+
+    font-weight: 900;
+
+    letter-spacing: 4px;
+
     margin-bottom: 10px;
+
+}
+
+footer > p {
+
+    color: #cccccc;
+
+}
+
+.footer-links {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 25px;
+
+    margin: 25px 0;
+
+}
+
+.footer-links a {
+
+    color: var(--white);
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+}
+
+.footer-links a:hover {
+
+    color: var(--gold);
+
 }
 
 .copyright {
-    color: #888;
-    margin-top: 15px;
+
+    color: #888888;
+
     font-size: 13px;
+
+    margin-top: 25px;
+
 }
 
 
-/* MOBILE RESPONSIVENESS */
+/* =================================
+   MOBILE RESPONSIVENESS
+================================= */
 
 @media (max-width: 700px) {
 
-    header {
+    .header {
+
         flex-direction: column;
+
+        padding: 20px;
+
     }
 
     nav {
+
         justify-content: center;
+
         gap: 15px;
+
+    }
+
+    nav a {
+
+        font-size: 13px;
+
     }
 
     .hero {
-        min-height: 480px;
+
+        min-height: 600px;
+
+        padding: 45px 15px;
+
+    }
+
+    .main-logo {
+
+        width: 165px;
+
     }
 
     .hero h1 {
+
+        font-size: 43px;
+
         letter-spacing: 3px;
+
     }
 
-    .hero h2 {
-        font-size: 20px;
+    .hero-subtitle {
+
+        font-size: 11px;
+
+        letter-spacing: 2px;
+
     }
 
-    .section,
-    .dark-section {
+    .slogan-image {
+
+        width: 310px;
+
+    }
+
+    .section {
+
         padding: 65px 7%;
+
     }
 
     .section h2,
-    .dark-section h2,
-    .contact-section h2 {
-        font-size: 30px;
+    .contact h2 {
+
+        font-size: 31px;
+
+    }
+
+    .section-text {
+
+        font-size: 15px;
+
+    }
+
+    .card-container,
+    .principles-container {
+
+        grid-template-columns: 1fr;
+
     }
 
 }
