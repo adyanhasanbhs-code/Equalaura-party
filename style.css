@@ -464,3 +464,131 @@ footer p {
     }
 
 }
+
+/* ==================================
+   HOMEPAGE LAYOUT FIX
+================================== */
+
+.hero {
+    background: var(--gold);
+    min-height: 680px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 850px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin: auto;
+}
+
+.hero-logo {
+    width: 190px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    color: var(--red);
+    font-size: clamp(42px, 7vw, 75px);
+    letter-spacing: 5px;
+    line-height: 1.1;
+    margin: 5px 0;
+}
+
+.hero .eyebrow {
+    color: var(--red);
+    text-align: center;
+    margin: 5px 0;
+}
+
+.hero-slogan {
+    display: block;
+    width: 350px;
+    max-width: 90%;
+    height: auto;
+    margin: 10px auto;
+}
+
+.hero-description {
+    max-width: 600px;
+    color: var(--black);
+    font-size: 17px;
+    text-align: center;
+    margin: 5px auto;
+}
+
+.hero-button {
+    display: inline-block;
+    background: var(--red);
+    color: var(--gold);
+    padding: 16px 32px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.hero-button:hover {
+    background: var(--dark-red);
+    transform: translateY(-3px);
+}
+
+
+/* WELCOME SECTION */
+
+.welcome-section {
+    padding: 90px 8%;
+    text-align: center;
+    background: white;
+}
+
+.welcome-section .cards {
+    text-align: left;
+}
+
+
+/* MOBILE FIX */
+
+@media (max-width: 700px) {
+
+    .hero {
+        min-height: 600px;
+        padding: 45px 15px;
+    }
+
+    .hero-logo {
+        width: 155px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+        letter-spacing: 3px;
+    }
+
+    .hero-slogan {
+        width: 300px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .hero-button {
+        padding: 14px 20px;
+    }
+
+}
+
